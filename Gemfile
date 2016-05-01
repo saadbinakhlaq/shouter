@@ -14,6 +14,8 @@ gem 'devise'
 gem 'haml'
 gem 'simple_form'
 gem 'carrierwave'
+gem 'sunspot_rails'
+gem 'sunspot_solr'
 
 group :development, :test do
   gem 'byebug'
