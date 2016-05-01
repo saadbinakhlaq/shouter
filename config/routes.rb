@@ -6,5 +6,8 @@ Rails.application.routes.draw do
   resources :text_shouts, only: [ :create ]
   resources :photo_shouts, only: [ :create ]
   resources :shouts, only: [ :show ]
-  resources :users, only: [ :show ]
+  resources :users, only: [ :show, :index ] do
+    post 'follow' => 'following_relationships#create'
+    delete 'follow' => 'following_relationships#destroy'
+  end
 end
