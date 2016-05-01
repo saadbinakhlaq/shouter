@@ -1,0 +1,9 @@
+= simple_form_for @text_shout do |form|
+  = form.text_field :body, placeholder: 'Shout content here', error: 'Need to add'
+  = form.submit 'Shout!'
+
+= simple_form_for @photo_shout do |form|
+  = form.file_field :image
+  = form.submit 'Photo shout!'
+
+= render @shouts
