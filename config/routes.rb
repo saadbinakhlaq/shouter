@@ -10,4 +10,6 @@ Rails.application.routes.draw do
     post 'follow' => 'following_relationships#create'
     delete 'follow' => 'following_relationships#destroy'
   end
+  resources :hashtags, only: [ :show ]
+  resource :search, only: [ :show ]
 end
